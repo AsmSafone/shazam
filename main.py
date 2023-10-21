@@ -1,9 +1,13 @@
 import io
 import os
+import uvicorn
 import logging
 from shazamio import Shazam
 from fastapi.responses import JSONResponse
 from fastapi import FastAPI, UploadFile, File, HTTPException
+
+# Configure logging
+logging.basicConfig(level=logging.INFO)
 
 
 app = FastAPI()
@@ -29,4 +33,4 @@ async def shazam(file: UploadFile = File(...)):
 
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5000)
+    uvicorn.run(app, host="0.0.0.0", port=5000)
