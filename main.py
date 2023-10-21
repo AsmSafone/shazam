@@ -1,8 +1,8 @@
 import io
 import os
-from PIL import Image
-from rembg import remove
+import logging
 from shazamio import Shazam
+from fastapi.responses import JSONResponse
 from fastapi import FastAPI, UploadFile, File, HTTPException
 
 
