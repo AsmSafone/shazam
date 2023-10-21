@@ -1,0 +1,6 @@
+rembg
+pillow
+fastapi
+uvicorn
+shazamio
+python-multipart
